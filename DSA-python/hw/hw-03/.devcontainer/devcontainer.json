@@ -1,0 +1,42 @@
+{
+  "name": "Python Teaching Container",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "git.openRepositoryInParentFolders": "always",
+        "livePreview.defaultPreviewPath": null,
+        "livePreview.openPreviewTarget": "embeddedPreview",
+        "livePreview.port": 5500,
+        "markdown.preview.security.level": "allow-insecure-local-content",
+        "extensions.ignoreR ecommendations": true,
+        "git.enableSmartCommit": true,
+        "git.confirmSync": false,
+        "git.autofetch": true,
+        "git.rebaseWhenSync": true,
+        "terminal.integrated.ignoreProcessKeybindingWarnings": true,
+        "files.exclude": {
+          "**/.github": true,
+          "**/.devcontainer": true,
+          ".gitignore": true,
+          "**/tests": true,
+          "**/index.html": true,
+          "**/__pycache__": true,
+          "*.ok": true,
+          "ok": true,
+          ".ok_history": true
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "noahsyn10.pydoctestbtn",
+        "searking.preview-vscode",
+        "ms-vscode.live-server",
+        "formulahendry.code-runner",
+        "chrisdias.vscode-opennewinstance"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install jupyter nbconvert ipykernel numpy pandas matplotlib beautifulsoup4 requests lxml networkx PyYAML"
+}
